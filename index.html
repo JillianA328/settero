@@ -1,0 +1,107 @@
+HTML
+ 
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link
+     href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+     rel="stylesheet"
+     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+     crossorigin="anonymous"
+   />
+   <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+     crossorigin="anonymous"
+     referrerpolicy="no-referrer"
+   />
+   <link href="assets/css/styles.css" />
+   <title>Weather Dashboard</title>
+ </head>
+ <!--style here because of whitebox-->
+ 
+ <body>
+   <!--header-->
+   <div class="container-fluid">
+     <header>
+       <h1 class="text-center text-light bg-primary">Weather Dashboard</h1>
+     </header>
+   </div>
+ 
+   <!--can I substitute for aside-->
+   <div class="container-fluid">
+     <div class="row">
+       <!--city search column-->
+       <div class="col-md-3 bg-light pt-3 pb-3">
+         <h2>Search A City:</h2>
+         <!--input for city search-->
+         <div class="input-group mb-3">
+           <input
+             id="searchCity"
+             type="text"
+             class="form-control"
+             placeholder="Enter City Name Here"
+             class="input-group-append"
+           />
+           <button
+             id="searchBtn"
+             class="btn btn-primary"
+             type="button"
+             id="button-addon2"
+           >
+             <i class="fas fa-search"></i>
+           </button>
+         </div>
+ 
+         <!-- Start city container -->
+         <div class="card">
+           <ul class="list-group list-group-flush list" id="city-list"></ul>
+         </div>
+       </div>
+ 
+       <!--current weather-->
+       <div class="col-md-9 bg-light pt-3 pb-3" id="current-weather">
+         <div class="weather-container">
+           <div class="card">
+             <div class="card-body">
+               <!--create element in dom to replace current city AND get rid of text here-->
+               <h3 class="card-title" id="current-city"></h3>
+               <img id="header-icon" />
+               <p class="card-text" id="tempEl">Temp:</p>
+               <p class="card-text" id="windEl">Wind Speed:</p>
+               <p class="card-text" id="humidEl">Humidity:</p>
+               <p class="card-text" id="uvEl">UV Index:</p>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ 
+   <!--5 day forecast start-->
+   <div class="container-fluid">
+     <div class="row">
+       <div class="col-lg-12 bg-light mt-3 pt-3 pb-3" id="forecast">
+         <h2>5 Day Forecast</h2>
+         <!--look to create similar card from weather container dynamically using jQuery-->
+       </div>
+     </div>
+   </div>
+ 
+   <script
+     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+     crossorigin="anonymous"
+   ></script>
+   <script
+     src="https://code.jquery.com/jquery-3.6.0.min.js"
+     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+     crossorigin="anonymous"
+   ></script>
+   <script src="script.js"></script>
+ </body>
+</html>
